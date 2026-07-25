@@ -71,25 +71,42 @@ export function CeoSidebar({ onClose }: CeoSidebarProps) {
       dir={isRtl ? 'rtl' : 'ltr'}
     >
       {/* Header */}
-      <div className="p-4 border-b border-white/10 flex items-center justify-between">
-        <div>
-          <h1 className="text-base font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Open3DModel /CEO
-          </h1>
-          <p className="text-[10px] text-white/50">Physiotherapy & Anatomy Suite</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={toggleLocale}
-            className="px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600/30 hover:bg-blue-500/40 text-blue-300 border border-blue-400/40 transition-colors"
-          >
-            {locale === 'en' ? 'عربي' : 'EN'}
-          </button>
-          {onClose && (
-            <button onClick={onClose} className="p-1 rounded-lg hover:bg-white/10 text-white/60 lg:hidden">
-              ✕
+      <div className="p-4 border-b border-white/10 space-y-3">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-base font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Open3DModel /CEO
+            </h1>
+            <p className="text-[10px] text-white/50">Physiotherapy & Anatomy Suite</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleLocale}
+              className="px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600/30 hover:bg-blue-500/40 text-blue-300 border border-blue-400/40 transition-colors"
+            >
+              {locale === 'en' ? 'عربي' : 'EN'}
             </button>
-          )}
+            {onClose && (
+              <button onClick={onClose} className="p-1 rounded-lg hover:bg-white/10 text-white/60 lg:hidden">
+                ✕
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Free Forever Dedication Banner */}
+        <div className="p-2.5 bg-emerald-950/40 border border-emerald-500/30 rounded-xl text-center space-y-1">
+          <span className="inline-block text-[9px] font-extrabold text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-400/30">
+            {locale === 'ar' ? 'مجاني بالكامل وإلى الأبد 💚' : '100% Free Forever 💚'}
+          </span>
+          <p className="text-[11px] text-emerald-100 font-semibold leading-relaxed">
+            {locale === 'ar'
+              ? 'عن روح الممرضة الفاضلة والحاجة حليمة العواودة'
+              : 'Dedicated in memory of Nurse & Hajja Halima Al-Awawdeh'}
+          </p>
+          <p className="text-[10px] text-emerald-300/80 font-medium">
+            {locale === 'ar' ? 'دعواتكم لها بالرحمة والمغفرة 🤲' : 'Keep her in your prayers 🤲'}
+          </p>
         </div>
       </div>
 

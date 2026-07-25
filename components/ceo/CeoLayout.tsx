@@ -48,17 +48,49 @@ export function CeoLayout() {
       {/* Main 3D Stage */}
       <main className="flex-1 relative min-w-0 h-full overflow-hidden">
         {!sceneReady && (
-          <div className="absolute inset-0 z-30 flex items-center justify-center bg-gray-950/90 backdrop-blur-md">
-            <div className="text-center">
-              <div className="mx-auto mb-3 h-10 w-10 animate-spin rounded-full border-2 border-blue-400 border-t-transparent" />
-              <p className="text-sm font-semibold text-white/90">Preparing Open3D Executive Stage</p>
-              <p className="mt-1 text-xs text-white/50">Loading high-resolution glTF models & shaders...</p>
+          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-gray-950/95 backdrop-blur-xl p-6">
+            <div className="relative flex items-center justify-center mb-6">
+              {/* Outer pulsing glow */}
+              <div className="absolute w-28 h-28 rounded-full bg-blue-500/20 animate-ping" />
+              <div className="absolute w-20 h-20 rounded-full bg-purple-500/30 animate-pulse" />
+              {/* Central Spinner */}
+              <div className="w-16 h-16 border-3 border-blue-400 border-t-transparent rounded-full animate-spin shadow-lg" />
+            </div>
+
+            <h2 className="text-xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-300 to-emerald-400 bg-clip-text text-transparent mb-1 text-center">
+              Open3D Executive Anatomy Suite
+            </h2>
+            <p className="text-xs text-white/60 mb-6 text-center max-w-sm">
+              Loading high-resolution 3D anatomical models & clinical anchors...
+            </p>
+
+            {/* Dedication Banner */}
+            <div className="max-w-md w-full p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 shadow-2xl backdrop-blur-md text-center space-y-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold">
+                <span>💚</span>
+                <span>تطبيق مجاني وسيظل مجانًا دائمًا</span>
+              </div>
+              <p className="text-sm font-semibold text-emerald-100 leading-relaxed">
+                صدقة جارية عن روح الممرضة الفاضلة والحاجة حليمة العواودة
+              </p>
+              <p className="text-xs text-emerald-300/80 font-medium">
+                دعواتكم لها بالرحمة والمغفرة 🤲
+              </p>
             </div>
           </div>
         )}
+
         <CeoAnatomyScene onReady={() => setSceneReady(true)} />
         <CeoViewControls />
         <CeoInfoPanel />
+
+        {/* Permanent Bottom Tribute Ribbon */}
+        <div className="absolute bottom-3 left-4 z-20 hidden md:block">
+          <div className="px-3 py-1.5 rounded-xl bg-gray-900/80 backdrop-blur-md border border-emerald-500/30 text-[11px] text-emerald-200/90 shadow-xl flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>مجاني دائمًا — صدقة جارية عن روح الممرضة والحاجة حليمة العواودة (دعواتكم بالرحمة 🤲)</span>
+          </div>
+        </div>
       </main>
     </div>
   );
