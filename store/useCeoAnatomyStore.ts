@@ -107,8 +107,8 @@ export const useCeoAnatomyStore = create<CeoAnatomyState>((set, get) => ({
   activeClinicalTab: 'overview',
   activeTestId: null,
   cameraState: {
-    position: [0, 0.2, 6.5],
-    target: [0, 0.2, 0],
+    position: [0, 0.1, 14.5],
+    target: [0, 0.1, 0],
     fov: 45,
   },
 

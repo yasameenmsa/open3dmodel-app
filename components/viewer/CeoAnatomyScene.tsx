@@ -27,7 +27,7 @@ function SceneContent() {
     <Canvas
       dpr={[1, 2]}
       gl={{ alpha: true, antialias: true, preserveDrawingBuffer: true }}
-      camera={{ position: [0, 0.2, 6.5], fov: 45, near: 0.05, far: 100 }}
+      camera={{ position: [0, 0.1, 14.5], fov: 45, near: 0.05, far: 500 }}
       onPointerMissed={() => selectPart(null)}
     >
       <Stars radius={40} depth={30} count={1200} factor={2.2} saturation={0} fade speed={0.5} />
@@ -54,7 +54,7 @@ function SceneContent() {
       </Suspense>
       <CeoLabelRenderer />
       <CeoCameraController />
-      <OrbitControls enableDamping dampingFactor={0.05} />
+      <OrbitControls enableDamping dampingFactor={0.05} minDistance={0.5} maxDistance={300} />
     </Canvas>
   );
 }

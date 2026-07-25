@@ -7,12 +7,12 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import * as THREE from 'three';
 
 const CAMERA_VIEWS: Record<string, { position: [number, number, number]; target: [number, number, number] }> = {
-  front: { position: [0, 0.2, 6.5], target: [0, 0.2, 0] },
-  back: { position: [0, 0.2, -6.5], target: [0, 0.2, 0] },
-  left: { position: [-6.5, 0.2, 0], target: [0, 0.2, 0] },
-  right: { position: [6.5, 0.2, 0], target: [0, 0.2, 0] },
-  top: { position: [0, 7.5, 0.01], target: [0, 0.2, 0] },
-  iso: { position: [4.5, 4.5, 4.5], target: [0, 0.2, 0] },
+  front: { position: [0, 0.1, 14.5], target: [0, 0.1, 0] },
+  back: { position: [0, 0.1, -14.5], target: [0, 0.1, 0] },
+  left: { position: [-14.5, 0.1, 0], target: [0, 0.1, 0] },
+  right: { position: [14.5, 0.1, 0], target: [0, 0.1, 0] },
+  top: { position: [0, 16, 0.01], target: [0, 0.1, 0] },
+  iso: { position: [10, 10, 10], target: [0, 0.1, 0] },
 };
 
 export function CeoCameraController() {
@@ -36,8 +36,8 @@ export function CeoCameraController() {
       targetLookAt.current = new THREE.Vector3(...preset.target);
       isAnimating.current = true;
     } else if (cmd.type === 'reset') {
-      targetPosition.current = new THREE.Vector3(0, 0.2, 6.5);
-      targetLookAt.current = new THREE.Vector3(0, 0.2, 0);
+      targetPosition.current = new THREE.Vector3(0, 0.1, 14.5);
+      targetLookAt.current = new THREE.Vector3(0, 0.1, 0);
       isAnimating.current = true;
     } else if (cmd.type === 'focus') {
       const targetVec = new THREE.Vector3(...cmd.target);
