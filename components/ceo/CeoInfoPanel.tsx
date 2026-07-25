@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useLocale } from 'next-intl';
 import { useCeoAnatomyStore } from '@/store/useCeoAnatomyStore';
 import { CATEGORIES } from '@/data/categories';
@@ -19,6 +19,7 @@ export function CeoInfoPanel() {
   const locale = useLocale();
   const isRtl = locale === 'ar';
   const selectedPartId = useCeoAnatomyStore((s) => s.selectedPartId);
+  const selectPart = useCeoAnatomyStore((s) => s.selectPart);
   const partCategories = useCeoAnatomyStore((s) => s.partCategories);
   const partDisplayNames = useCeoAnatomyStore((s) => s.partDisplayNames);
   const partVisibility = useCeoAnatomyStore((s) => s.partVisibility);
@@ -26,6 +27,9 @@ export function CeoInfoPanel() {
   const displayMode = useCeoAnatomyStore((s) => s.displayMode);
   const setDisplayMode = useCeoAnatomyStore((s) => s.setDisplayMode);
   const setPartVisible = useCeoAnatomyStore((s) => s.setPartVisible);
+
+  const [dismissHint, setDismissHint] = useState(false);
+
   const info = useMemo(() => {
     if (!selectedPartId) return null;
     const name = partDisplayNames[selectedPartId];
@@ -34,16 +38,24 @@ export function CeoInfoPanel() {
   }, [selectedPartId, partDisplayNames]);
 
   if (!selectedPartId) {
+    if (dismissHint) return null;
     return (
-      <div className="absolute bottom-5 right-5 w-80 p-4 bg-gray-900/85 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl z-20" dir={isRtl ? 'rtl' : 'ltr'}>
+      <div className="absolute bottom-5 right-5 w-80 p-4 bg-gray-900/85 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl z-20 flex items-start justify-between gap-2" dir={isRtl ? 'rtl' : 'ltr'}>
         <div className="flex items-center gap-3 text-white/50">
-          <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 text-blue-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <p className="text-xs font-medium">
+          <p className="text-xs font-medium leading-relaxed">
             {locale === 'ar' ? 'انقر على أي جزء في النموذج لعرض تفاصيله وأدوات التحكم الحية.' : 'Click on any anatomical part in the 3D view to inspect details & live controls.'}
           </p>
         </div>
+        <button
+          onClick={() => setDismissHint(true)}
+          className="text-white/40 hover:text-white hover:bg-white/10 p-1 rounded-lg transition-colors text-xs font-bold leading-none shrink-0"
+          aria-label="Close hint"
+        >
+          ✕
+        </button>
       </div>
     );
   }
@@ -65,7 +77,7 @@ export function CeoInfoPanel() {
       className="absolute bottom-5 right-5 w-80 max-h-[75vh] overflow-y-auto p-4 bg-gray-900/90 backdrop-blur-md rounded-2xl border border-white/15 shadow-2xl z-20 space-y-3"
       dir={isRtl ? 'rtl' : 'ltr'}
     >
-      {/* Title & Badge */}
+      {/* Title & Badge & Close Button */}
       <div className="flex items-start justify-between gap-2">
         <div>
           <h3 className="text-base font-bold text-white leading-tight">{displayName}</h3>
@@ -82,6 +94,13 @@ export function CeoInfoPanel() {
             </span>
           )}
         </div>
+        <button
+          onClick={() => selectPart(null)}
+          className="text-white/40 hover:text-white hover:bg-white/10 p-1.5 rounded-lg transition-colors text-xs font-bold leading-none shrink-0"
+          aria-label="Close info panel"
+        >
+          ✕
+        </button>
       </div>
 
 
