@@ -1,0 +1,120 @@
+.main {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(135deg, #07111f 0%, #111827 100%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.3vw, 2.2rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: #9fb0c9;
+  max-width: 760px;
+  line-height: 1.5;
+}
+
+.viewerShell {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 16px;
+  min-height: 70vh;
+}
+
+.sidebar {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.25);
+}
+
+.sidebarTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+.partList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.partButton {
+  text-align: left;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(30, 41, 59, 0.8);
+  color: #f8fafc;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.partButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 252, 0.5);
+}
+
+.partButtonActive {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  border-color: rgba(125, 211, 252, 0.4);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolbarButton {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(30, 41, 59, 0.9);
+  color: #e2e8f0;
+}
+
+.toolbarButtonPrimary {
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  color: #f0fdfa;
+}
+
+.viewerCard {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.25);
+}
+
+.helperText {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .viewerShell {
+    grid-template-columns: 1fr;
+  }
+}

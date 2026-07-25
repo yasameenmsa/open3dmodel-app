@@ -1,0 +1,39 @@
+
+> open3dmodel-app@0.1.0 build
+> next build
+
+▲ Next.js 16.2.11 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 62s
+  Running TypeScript ...
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+Installing dependencies
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your app and pages directories).
+
+
+Installing devDependencies (npm):
+- typescript
+
+
+up to date, audited 145 packages in 7s
+
+24 packages are looking for funding
+  run `npm fund` for details
+
+5 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @parcel/watcher@2.6.0 (install: node-gyp rebuild)
+npm warn allow-scripts   @swc/core@1.15.46 (postinstall: node postinstall.js)
+npm warn allow-scripts   sharp@0.34.5 (install: node install/check.js || npm run build)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+
+The "id" argument must be of type string. Received undefined
+Next.js build worker exited with code: 1 and signal: null
