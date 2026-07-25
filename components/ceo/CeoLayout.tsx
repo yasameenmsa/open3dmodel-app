@@ -83,14 +83,6 @@ export function CeoLayout() {
         <CeoAnatomyScene onReady={() => setSceneReady(true)} />
         <CeoViewControls />
         <CeoInfoPanel />
-
-        {/* Permanent Bottom Tribute Ribbon */}
-        <div className="absolute bottom-3 left-4 z-20 hidden md:block">
-          <div className="px-3 py-1.5 rounded-xl bg-gray-900/80 backdrop-blur-md border border-emerald-500/30 text-[11px] text-emerald-200/90 shadow-xl flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>مجاني دائمًا — صدقة جارية عن روح الممرضة والحاجة حليمة العواودة (دعواتكم بالرحمة 🤲)</span>
-          </div>
-        </div>
       </main>
     </div>
   );
