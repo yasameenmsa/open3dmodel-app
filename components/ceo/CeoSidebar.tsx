@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { useLocale } from 'next-intl';
 import { useCeoAnatomyStore } from '@/store/useCeoAnatomyStore';
 import { OPEN3D_MODELS } from '@/data/open3dModels';
 import { CATEGORY_LIST, CATEGORY_FILTER_OPTIONS } from '@/data/categories';
+import { SPECIAL_TESTS, PATHOLOGIES, EXERCISES } from '@/data/clinicalData';
 import type { DisplayMode, LabelMode, ViewPreset, SceneModelKey } from '@/types/anatomy';
 
 interface CeoSidebarProps {
@@ -13,6 +15,14 @@ interface CeoSidebarProps {
 export function CeoSidebar({ onClose }: CeoSidebarProps) {
   const locale = useLocale();
   const isRtl = locale === 'ar';
+
+  const [clinicalOpen, setClinicalOpen] = useState(true);
+  const [activeTestCategory, setActiveTestCategory] = useState('All');
+
+  const activeClinicalTab = useCeoAnatomyStore((s) => s.activeClinicalTab);
+  const setActiveClinicalTab = useCeoAnatomyStore((s) => s.setActiveClinicalTab);
+  const activeTestId = useCeoAnatomyStore((s) => s.activeTestId);
+  const setActiveTestId = useCeoAnatomyStore((s) => s.setActiveTestId);
 
   const modelKey = useCeoAnatomyStore((s) => s.modelKey);
   const setModelKey = useCeoAnatomyStore((s) => s.setModelKey);
@@ -148,6 +158,145 @@ export function CeoSidebar({ onClose }: CeoSidebarProps) {
             </label>
           ))}
         </div>
+      </div>
+
+      {/* Clinical Suite & Assessment */}
+      <div className="p-4 border-b border-white/10 space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+            <h2 className="text-xs font-bold uppercase tracking-wider text-emerald-300">
+              {locale === 'ar' ? 'الجناح السريري والتقييم' : 'Clinical & Rehab Suite'}
+            </h2>
+          </div>
+          <button
+            onClick={() => setClinicalOpen(!clinicalOpen)}
+            className="text-xs text-white/60 hover:text-white px-2 py-0.5 rounded-md hover:bg-white/10"
+          >
+            {clinicalOpen ? '−' : '+'}
+          </button>
+        </div>
+
+        {clinicalOpen && (
+          <div className="space-y-3 pt-1">
+            {/* Tabs */}
+            <div className="flex gap-1 bg-black/40 p-1 rounded-xl border border-white/10">
+              <button
+                onClick={() => setActiveClinicalTab('tests')}
+                className={`flex-1 py-1 text-[10px] font-bold rounded-lg transition-colors ${
+                  activeClinicalTab === 'tests' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                {locale === 'ar' ? 'الاختبارات' : 'Tests'}
+              </button>
+              <button
+                onClick={() => setActiveClinicalTab('pathology')}
+                className={`flex-1 py-1 text-[10px] font-bold rounded-lg transition-colors ${
+                  activeClinicalTab === 'pathology' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                {locale === 'ar' ? 'الأمراض' : 'Pathologies'}
+              </button>
+              <button
+                onClick={() => setActiveClinicalTab('exercises')}
+                className={`flex-1 py-1 text-[10px] font-bold rounded-lg transition-colors ${
+                  activeClinicalTab === 'exercises' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                {locale === 'ar' ? 'التمارين' : 'Rehab'}
+              </button>
+            </div>
+
+            {/* Special Tests Tab */}
+            {activeClinicalTab === 'tests' && (
+              <div className="space-y-3">
+                {/* Category Filter */}
+                <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-white/20">
+                  {['All', 'Shoulder', 'Elbow', 'Wrist/Hand', 'Hip', 'Knee', 'Ankle', 'Spine'].map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setActiveTestCategory(cat)}
+                      className={`whitespace-nowrap px-2.5 py-0.5 text-[9px] font-bold rounded-full transition-colors border ${
+                        activeTestCategory === cat
+                          ? 'bg-blue-600/30 border-blue-400 text-white'
+                          : 'bg-white/5 border-white/10 text-white/60 hover:bg-white/10'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Tests List */}
+                <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
+                  {SPECIAL_TESTS.filter(
+                    (t) => activeTestCategory === 'All' || t.category === activeTestCategory
+                  ).map((test) => (
+                    <div
+                      key={test.id}
+                      onClick={() => setActiveTestId(activeTestId === test.id ? null : test.id)}
+                      className={`p-2.5 rounded-xl border cursor-pointer transition-all ${
+                        activeTestId === test.id
+                          ? 'bg-blue-600/30 border-blue-400 text-white shadow-lg'
+                          : 'bg-white/5 border-white/5 text-white/80 hover:bg-white/10'
+                      }`}
+                    >
+                      <div className="text-xs font-bold">{locale === 'ar' ? test.nameAr : test.nameEn}</div>
+                      {test.descriptionEn && (
+                        <p className="text-[10px] text-white/60 mt-0.5 leading-relaxed line-clamp-2">
+                          {locale === 'ar' ? test.descriptionAr : test.descriptionEn}
+                        </p>
+                      )}
+                      {activeTestId === test.id && test.positiveSignEn && (
+                        <div className="mt-1.5 pt-1.5 border-t border-white/10 text-[10px]">
+                          <span className="text-emerald-300 font-semibold">
+                            {locale === 'ar' ? 'العلامة الإيجابية:' : 'Positive Sign:'}{' '}
+                          </span>
+                          <span className="text-white/80">
+                            {locale === 'ar' ? test.positiveSignAr : test.positiveSignEn}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Pathologies Tab */}
+            {activeClinicalTab === 'pathology' && (
+              <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
+                {PATHOLOGIES.map((p) => (
+                  <div key={p.id} className="p-2.5 bg-white/5 rounded-xl border border-white/5 space-y-1">
+                    <span className="text-xs font-bold text-amber-300">{locale === 'ar' ? p.nameAr : p.nameEn}</span>
+                    <p className="text-[10px] text-white/60 leading-relaxed">
+                      {locale === 'ar' ? p.descriptionAr : p.descriptionEn}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Exercises Tab */}
+            {activeClinicalTab === 'exercises' && (
+              <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
+                {EXERCISES.map((ex) => (
+                  <div key={ex.id} className="p-2.5 bg-white/5 rounded-xl border border-white/5 space-y-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-emerald-300">{locale === 'ar' ? ex.nameAr : ex.nameEn}</span>
+                      <span className="text-[9px] px-1.5 py-0.5 bg-emerald-500/20 text-emerald-300 rounded-full font-semibold capitalize">
+                        {ex.difficulty}
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-white/60 leading-relaxed">
+                      {locale === 'ar' ? ex.descriptionAr : ex.descriptionEn}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Display & Label Modes */}

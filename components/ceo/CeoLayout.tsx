@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { CeoSidebar } from '@/components/ceo/CeoSidebar';
 import { CeoInfoPanel } from '@/components/ceo/CeoInfoPanel';
 import { CeoViewControls } from '@/components/ceo/CeoViewControls';
-import { CeoClinicalPanel } from '@/components/ceo/CeoClinicalPanel';
 
 const CeoAnatomyScene = dynamic(() => import('@/components/viewer/CeoAnatomyScene'), {
   ssr: false,
@@ -59,7 +58,6 @@ export function CeoLayout() {
         )}
         <CeoAnatomyScene onReady={() => setSceneReady(true)} />
         <CeoViewControls />
-        <CeoClinicalPanel />
         <CeoInfoPanel />
       </main>
     </div>
