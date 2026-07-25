@@ -1,0 +1,311 @@
+{
+  "Skull": {
+    "descriptionEn": "The bony structure forming the head, enclosing and protecting the brain. Composed of 22 bones fused together at sutures.",
+    "descriptionAr": "الهيكل العظمي الذي يشكل الرأس، يحيط بالدماغ ويعيقه. مكون من 22 عظمة ملتحمة عند الغُرَز.",
+    "functionEn": "Protects the brain, supports facial structures, and houses the organs of special sense.",
+    "functionAr": "يحمي الدماغ، ويدعم بنى الوجه، ويحوي أعضاء الحس الخاصة.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Skull",
+    "wikiAr": "https://ar.wikipedia.org/wiki/جمجمة"
+  },
+  "Pineal Gland": {
+    "descriptionEn": "A small endocrine gland in the brain that produces melatonin, regulating sleep-wake cycles.",
+    "descriptionAr": "غدة صماء صغيرة في الدماغ تنتج الميلاتونين، مما ينظم دورات النوم والاستيقاظ.",
+    "functionEn": "Secretes melatonin to regulate circadian rhythms and seasonal biological functions.",
+    "functionAr": "تفرز الميلاتونين لتنظيم الإيقاع اليومي والوظائف الموسمية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Pineal_gland"
+  },
+  "Larynx": {
+    "descriptionEn": "The voice box, a cartilaginous structure in the neck containing the vocal cords. Part of the respiratory system.",
+    "descriptionAr": "علب الصوت، بنية غضروفية في الرقبة تحتوي على الأحبال الصوتية. جزء من الجهاز التنفسي.",
+    "functionEn": "Produces sound through vibration of vocal cords, protects the trachea during swallowing.",
+    "functionAr": "ينتج الصوت عن طريق اهتزاز الأحبال الصوتية، ويحمي القصبة الهوائية أثناء البلع.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Larynx"
+  },
+  "Thyroid Gland": {
+    "descriptionEn": "A butterfly-shaped endocrine gland in the front of the neck, producing hormones that regulate metabolism.",
+    "descriptionAr": "غدة صماوية على شكل فراشة في مقدمة الرقبة، تنتج هرمونات تنظم عملية الأيض.",
+    "functionEn": "Produces T3 and T4 hormones that regulate metabolic rate, heart rate, and body temperature.",
+    "functionAr": "تنتج هرموني T3 وT4 اللذين يُنظّمان معدل الأيض ون beating القلب ودرجة حرارة الجسم.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Thyroid"
+  },
+  "Cerebral Cortex": {
+    "descriptionEn": "The outer layer of neural tissue of the cerebrum, responsible for higher brain functions.",
+    "descriptionAr": "الطبقة الخارجية من النسيج العصبي للدماغ الكبير، المسؤولة عن الوظائف الدماغية العليا.",
+    "functionEn": "Controls voluntary movement, speech, sensation, thought, memory, and executive function.",
+    "functionAr": "يتحكم في الحركة الإرادية والكلام والإحساس والتفكير والذاكرة والوظائف التنفيذية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Cerebral_cortex"
+  },
+  "Cerebellum": {
+    "descriptionEn": "The 'little brain' at the back of the skull, crucial for motor control and coordination.",
+    "descriptionAr": "'الدماغ الصغير' في الجزء الخلفي من الجمجة، ضروري للتحكم الحركي والتنسيق.",
+    "functionEn": "Coordinates voluntary movements, balance, posture, and motor learning.",
+    "functionAr": "ينسّق الحركات الإرادية والتوازن والوضعية والتعلم الحركي.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Cerebellum"
+  },
+  "Eye": {
+    "descriptionEn": "The organ of vision, a complex sensory structure that detects light and converts it to neural signals.",
+    "descriptionAr": "عضو البصر، بنية حسية معقدة تكتشف الضوء وتحوله إلى إشارات عصبية.",
+    "functionEn": "Captures visual information, focuses light on the retina, and converts it to electrical signals for the brain.",
+    "functionAr": "تلتقط المعلومات البصرية وتركّز الضوء على الشبكية وتحوله إلى إشارات كهربائية للدماغ.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_eye"
+  },
+  "Heart": {
+    "descriptionEn": "A muscular organ that pumps blood through the circulatory system via rhythmic contractions.",
+    "descriptionAr": "عضو عضلي يضخ الدم عبر الجهاز الدوري من خلال انقباضات إيقاعية.",
+    "functionEn": "Pumps oxygenated blood to the body and returns deoxygenated blood to the lungs.",
+    "functionAr": "يضخ الدم المؤكسج إلى الجسم ويعيد الدم غير المؤكسج إلى الرئتين.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_heart"
+  },
+  "Lung": {
+    "descriptionEn": "A pair of spongy organs in the chest responsible for gas exchange during respiration.",
+    "descriptionAr": "زوج من الأعضاء الإسفنجية في الصدر مسؤولة عن تبادل الغازات أثناء التنفس.",
+    "functionEn": "Facilitates gas exchange — oxygen enters the blood, carbon dioxide is expelled.",
+    "functionAr": "يُسهّل تبادل الغازات — يدخل الأكسجين إلى الدم ويُطرد ثاني أكسيد الكربون.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_lung"
+  },
+  "Liver": {
+    "descriptionEn": "The largest internal organ, performing over 500 vital functions including detoxification and bile production.",
+    "descriptionAr": "أكبر عضو داخلي، يؤدي أكثر من 500 وظيفة حيوية بما في ذلك تطهير السموم وإنتاج الصفراء.",
+    "functionEn": "Detoxifies blood, produces bile, stores glycogen, synthesizes proteins, and regulates metabolism.",
+    "functionAr": "يُطهّر الدم، ويُنتج الصفراء، ويخزّن الجلايكوجين، ويُ sintetize البروتينات، ويُنظم الأيض.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_liver"
+  },
+  "Stomach": {
+    "descriptionEn": "A muscular, hollow organ in the upper abdomen that receives food from the esophagus and begins digestion.",
+    "descriptionAr": "عضو عضلي تجويفي في البطن العلوي يتلقى الطعام من المرئ ويبدأ عملية الهضم.",
+    "functionEn": "Stores food, mixes it with gastric acid and enzymes, and begins protein digestion.",
+    "functionAr": "يخزّن الطعام ويخلطه مع الحمض المعدي والإنزيمات ويبدأ هضم البروتينات.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_stomach"
+  },
+  "Spleen": {
+    "descriptionEn": "An organ in the upper left abdomen that filters blood and plays a role in immune function.",
+    "descriptionAr": "عضو في الجزء العلوي الأيسر من البطن يُرشّح الدم ويلعب دوراً في وظائف المناعة.",
+    "functionEn": "Filters blood, removes old red blood cells, stores platelets, and mounts immune responses.",
+    "functionAr": "يُرشّح الدم، ويُزيل خلايا الدم الحمراء القديمة، ويخزّن الصفائح الدموية، ويُطلق استجابات المناعة.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Spleen"
+  },
+  "Pancreas": {
+    "descriptionEn": "A glandular organ behind the stomach that produces digestive enzymes and hormones like insulin.",
+    "descriptionAr": "عضو غدي خلف المعدة يُنتج إنزيمات هاضمة وهرمونات مثل الإنسولين.",
+    "functionEn": "Produces digestive enzymes (exocrine) and insulin/glucagon for blood sugar regulation (endocrine).",
+    "functionAr": "يُنتج إنزيمات هاضمة (غدد خارجية) والإنولين/الغلوكاغون لتنظيم سكر الدم (غدد داخلية).",
+    "wikiEn": "https://en.wikipedia.org/wiki/Pancreas"
+  },
+  "Kidney": {
+    "descriptionEn": "A pair of bean-shaped organs that filter blood, remove waste, and regulate fluid balance.",
+    "descriptionAr": "زوج من الأعضاء على شكل حبة يُرشّان الدم ويُزيلان النفايات ويُنظّمان توازن السوائل.",
+    "functionEn": "Filters blood to produce urine, regulates electrolytes, blood pressure, and red blood cell production.",
+    "functionAr": "يُرشّح الدم لإنتاج البول، ويُنظم الإلكتروليتات وضغط الدم وإنتاج خلايا الدم الحمراء.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_kidney"
+  },
+  "Brain": {
+    "descriptionEn": "The central organ of the nervous system, controlling thought, memory, emotion, and all body functions.",
+    "descriptionAr": "العضو المركزي في الجهاز العصبي، يتحكم في التفكير والذاكرة والอารมيات وجميع وظائف الجسم.",
+    "functionEn": "Processes sensory information, coordinates voluntary and involuntary actions, and enables consciousness.",
+    "functionAr": "يُعالج المعلومات الحسية، وينسّق الإجراءات الإرادية واللا إرادية، ويُمكّن الوعي.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Human_brain"
+  },
+  "Tongue": {
+    "descriptionEn": "A muscular organ in the mouth essential for taste, speech, and swallowing.",
+    "descriptionAr": "عضو عضلي في الفم ضروري للذوق والكلام والبلع.",
+    "functionEn": "Aids in chewing, swallowing, speech, and contains taste receptors.",
+    "functionAr": "يساعد في المضغ والبلع والكلام، ويحتوي على مستقبلات التذوق.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Tongue"
+  },
+  "Diaphragm": {
+    "descriptionEn": "A dome-shaped muscle separating the chest from the abdomen, essential for breathing.",
+    "descriptionAr": "عضلة على شكل قبة تفصل الصدر عن البطن، ضرورية للتنفس.",
+    "functionEn": "Primary muscle of respiration — contracts to draw air into the lungs.",
+    "functionAr": "العضلة الأساسية للتنفس — تنقبض لسحب الهواء إلى الرئتين.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Diaphragm"
+  },
+  "Trachea": {
+    "descriptionEn": "The windpipe — a tube connecting the larynx to the bronchi, allowing air passage to the lungs.",
+    "descriptionAr": "القصبة الهوائية — أنبوب يربط الحنجرة بالقصبات الهوائية، يسمح بمرور الهواء إلى الرئتين.",
+    "functionEn": "Conducts air from the upper airway to the lungs, lined with cilia to clear debris.",
+    "functionAr": "يُوصّل الهواء من المسار الهوائي العلوي إلى الرئتين، مبطّن بالأسيليات لتنظيف الحطام.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Trachea"
+  },
+  "Gallbladder": {
+    "descriptionEn": "A small pear-shaped organ beneath the liver that stores and concentrates bile.",
+    "descriptionAr": "عضو صغير على شكل كمثرى تحت الكبد يُخزّن ويثقّص الصفراء.",
+    "functionEn": "Stores bile produced by the liver and releases it into the small intestine to aid fat digestion.",
+    "functionAr": "يُخزّن الصفراء التي يُنتجها الكبد ويُطلقها إلى الأمعاء الدقيقة لمساعدة هضم الدهون.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Gallbladder"
+  },
+  "Bladder": {
+    "descriptionEn": "A hollow muscular organ that stores urine before excretion through the urethra.",
+    "descriptionAr": "عضو عضلي تجويفي يُخزّن البول قبل التخلص منه عبر الإحليل.",
+    "functionEn": "Stores and expels urine, controlled by the detrusor muscle and sphincters.",
+    "functionAr": "يُخزّن ويُطلّق البول، تحت تحكم عضلة المُخَرْبِق والمزاني.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Urinary_bladder"
+  },
+  "Esophagus": {
+    "descriptionEn": "A muscular tube connecting the throat to the stomach, transporting food by peristalsis.",
+    "descriptionAr": "أنبوب عضلي يربط الحلق بالمعدة، ينقل الطعام بالحركة الدودية.",
+    "functionEn": "Transports food and liquids from the mouth to the stomach via peristaltic contractions.",
+    "functionAr": "ينقل الطعام والسوائل من الفم إلى المعدة عن طريق انقباضات حركية دودية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Esophagus"
+  },
+  "Humerus": {
+    "descriptionEn": "The long bone of the upper arm, extending from the shoulder to the elbow.",
+    "descriptionAr": "العظمة الطويلة في الذراع العلوية، تمتد من الكتف إلى المرفق.",
+    "functionEn": "Provides structural support for the upper limb and attachment points for muscles.",
+    "functionAr": "يوفر الدعم الهيكلي للطرف العلوي ونقاط ارتباط للعضلات.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Humerus"
+  },
+  "Femur": {
+    "descriptionEn": "The thigh bone — the longest, heaviest, and strongest bone in the human body.",
+    "descriptionAr": "عظمة الفخذ — أطول عظمة وأثقلها وأقواها في جسم الإنسان.",
+    "functionEn": "Supports body weight, provides leverage for locomotion, and houses bone marrow.",
+    "functionAr": "يدعم وزن الجسم، ويوفّر رافعة للحركة، ويُخزّن نخاع العظم.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Femur"
+  },
+  "Tibia": {
+    "descriptionEn": "The shinbone — the larger of the two bones in the lower leg, bearing most of the body's weight.",
+    "descriptionAr": "عظمة الظنبور — أكبر عظمتين في الساق السفلي، يتحمل معظم وزن الجسم.",
+    "functionEn": "Bears body weight and provides attachment for muscles of the lower leg.",
+    "functionAr": "يتحمل وزن الجسم ويُوفّر ارتباطاً لعضلات الساق السفلي.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Tibia"
+  },
+  "Fibula": {
+    "descriptionEn": "The smaller bone of the lower leg, running parallel to the tibia.",
+    "descriptionAr": "العظمة الأصغر في الساق السفلي، تسير متوازية مع الظنبور.",
+    "functionEn": "Provides attachment for muscles and stabilizes the ankle joint.",
+    "functionAr": "يُوفّر ارتباطاً للعضلات ويُثبّت مفصل الكاحل.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Fibula"
+  },
+  "Sternum": {
+    "descriptionEn": "The breastbone — a flat bone in the center of the chest connecting to the ribs via cartilage.",
+    "descriptionAr": "عظم الصدر — عظم مسطح في منتصف الصدر يتصل بالأضلاع عبر الغضاريف.",
+    "functionEn": "Protects the heart and major blood vessels, anchors the rib cage.",
+    "functionAr": "يحمي القلب والأوعية الدموية الكبرى، ويربط جزر الأضلاع.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Sternum"
+  },
+  "Vertebral Column": {
+    "descriptionEn": "The spine — a series of 33 vertebrae protecting the spinal cord and supporting the body.",
+    "descriptionAr": "العمود الفقري — سلسلة من 33 فقرة تحمي الحبل الشوكي وتدعم الجسم.",
+    "functionEn": "Protects the spinal cord, supports the head and body, allows flexibility and movement.",
+    "functionAr": "يحمي الحبل الشوكي، ويدعم الرأس والجسم، ويسمح بالمرنونة والحركة.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Vertebral_column"
+  },
+  "Pelvis": {
+    "descriptionEn": "The basin-shaped skeletal structure supporting the spine and enclosing the abdominal organs.",
+    "descriptionAr": "الهيكل العظمي على شكل حوض يدعم العمود الفقري ويُحيط بأعضاء البطن.",
+    "functionEn": "Supports body weight, protects pelvic organs, provides attachment for lower limb muscles.",
+    "functionAr": "يدعم وزن الجسم، ويحمي أعضاء الحوض، ويُوفّر ارتباطاً لعضلات الطرف السفلي.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Pelvis"
+  },
+  "Scapula": {
+    "descriptionEn": "The shoulder blade — a flat triangular bone at the back of the shoulder.",
+    "descriptionAr": "لوح الكتف — عظم مسطح مثلثي في الجزء الخلفي من الكتف.",
+    "functionEn": "Provides attachment for shoulder and arm muscles, connects the upper limb to the axial skeleton.",
+    "functionAr": "يُوفّر ارتباطاً لعضلات الكتف والذراع، ويربط الطرف العلوي بالهيكل المحوري.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Scapula"
+  },
+  "Clavicle": {
+    "descriptionEn": "The collarbone — a long bone connecting the arm to the trunk.",
+    "descriptionAr": "عظمة الترقوة — عظم طويل يربط الذراع بالجذع.",
+    "functionEn": "Transmits forces from the upper limb to the axial skeleton, protects underlying vessels.",
+    "functionAr": "يُحوّل القوى من الطرف العلوي إلى الهيكل المحوري، ويحمي الأوعية الدموية السفلية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Clavicle"
+  },
+  "Rib": {
+    "descriptionEn": "One of 24 curved bones forming the rib cage, protecting the thoracic organs.",
+    "descriptionAr": "واحد من 24 عظمة منحنية تشكل قفص ضلعي يحمي أعضاء الصدر.",
+    "functionEn": "Protects the heart, lungs, and major vessels; aids in breathing.",
+    "functionAr": "يحمي القلب والرئتين والأوعية الدموية الكبرى؛ يساعد في التنفس.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Rib"
+  },
+  "Mandible": {
+    "descriptionEn": "The jawbone — the largest and strongest bone of the face, holding the lower teeth.",
+    "descriptionAr": "عظمة الفك — أكبر عظمة وأقواها في الوجه، تحمل الأسنان السفلية.",
+    "functionEn": "Houses the lower teeth, enables chewing and speech.",
+    "functionAr": "تحتوي الأسنان السفلية، وتُمكّن المضغ والكلام.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Mandible"
+  },
+  "Maxilla": {
+    "descriptionEn": "The upper jawbone, forming the central part of the face and holding the upper teeth.",
+    "descriptionAr": "عظمة الفك العلوي، تشكل الجزء المركزي من الوجه وتحمل الأسنان العلوية.",
+    "functionEn": "Forms the upper jaw, houses upper teeth, contributes to the orbit and nasal cavity.",
+    "functionAr": "تشكل الفك العلوي، وتحتوي الأسنان العلوية، وتُشكّل الجزء من الحجاج والتجويف الأنفي.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Maxilla"
+  },
+  "Patella": {
+    "descriptionEn": "The kneecap — a small triangular bone protecting the front of the knee joint.",
+    "descriptionAr": "رضفة الركبة — عظم صغير مثلثي يحمي مقدمة مفصل الركبة.",
+    "functionEn": "Protects the knee joint, increases leverage of the quadriceps muscle.",
+    "functionAr": "يحمي مفصل الركبة، ويزيد رافعة عضلة الرباعية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Patella"
+  },
+  "Sacrum": {
+    "descriptionEn": "A triangular bone at the base of the spine, formed by 5 fused vertebrae.",
+    "descriptionAr": "عظم مثلثي عند قاعدة العمود الفقري، مكون من 5 فقرات ملتحمة.",
+    "functionEn": "Connects the spine to the hip bones, transmits body weight to the pelvis.",
+    "functionAr": "يربط العمود الفقري بعظمة الحوض، ويُحوّل وزن الجسم إلى الحوض.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Sacrum"
+  },
+  "Coccyx": {
+    "descriptionEn": "The tailbone — a small triangular bone at the very bottom of the spine.",
+    "descriptionAr": "عظمة الذيل — عظم صغير مثلثي في أسفل العمود الفقري.",
+    "functionEn": "Provides attachment for ligaments and muscles of the pelvic floor.",
+    "functionAr": "يُوفّر ارتباطاً للأربطة والعضلات لأرضية الحوض.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Coccyx"
+  },
+  "Radius": {
+    "descriptionEn": "The forearm bone on the thumb side, allowing rotation of the forearm.",
+    "descriptionAr": "عظمة الساعد على جانب الإبهام، تسمح بدوران الساعد.",
+    "functionEn": "Enables pronation and supination of the forearm, articulates with the wrist.",
+    "functionAr": "يُمكّن الإمالة والاستقامة للساعد، ومفاصل مع الرسغ.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Radius_(bone)"
+  },
+  "Ulna": {
+    "descriptionEn": "The forearm bone on the little finger side, forming the elbow joint with the humerus.",
+    "descriptionAr": "عظمة الساعد على جانب الخنصر، تشكل مفصل المرفق مع عظمة العضد.",
+    "functionEn": "Forms the elbow joint, provides attachment for forearm muscles.",
+    "functionAr": "تشكل مفصل المرفق، وتُوفّر ارتباطاً لعضلات الساعد.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Ulna"
+  },
+  "Esophagus": {
+    "descriptionEn": "A muscular tube about 25 cm long connecting the pharynx to the stomach.",
+    "descriptionAr": "أنبوب عضلي بطول حوالي 25 سم يربط الحلق بالمعدة.",
+    "functionEn": "Transports food from mouth to stomach via peristalsis.",
+    "functionAr": "ينقل الطعام من الفم إلى المعدة عن طريق الحركة الدودية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Esophagus"
+  },
+  "Prostate Gland": {
+    "descriptionEn": "A walnut-sized gland in males surrounding the urethra below the bladder.",
+    "descriptionAr": "غدة بحجم الجوز في الذكور تُحيط بالإحليل أسفل المثانة.",
+    "functionEn": "Produces seminal fluid that nourishes and protects sperm.",
+    "functionAr": "تُنتج السائل المنوي الذي يُغذّي ويحمي الحيوانات المنوية.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Prostate"
+  },
+  "Uterus": {
+    "descriptionEn": "A hollow muscular organ in females where the fetus develops during pregnancy.",
+    "descriptionAr": "عضو عضلي تجويفي في الإناث ينمو فيه الجنين أثناء الحمل.",
+    "functionEn": "Houses and nourishes the developing fetus, menstruation occurs when no implantation.",
+    "functionAr": "تحتوي وتُغذّي الجنين النامي، وتحدث الدورة الشهرية عند عدم الإخصاب.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Uterus"
+  },
+  "Ovary": {
+    "descriptionEn": "The female reproductive organ that produces eggs and hormones (estrogen, progesterone).",
+    "descriptionAr": "العضو التناسلي الأنثوي الذي يُنتج البويضات والهرمونات (الاستروجين، البروجسترون).",
+    "functionEn": "Produces ova (eggs) and sex hormones essential for reproduction.",
+    "functionAr": "يُنتج البويضات والهرمونات الجنسية الضرورية للتناسل.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Ovary"
+  },
+  "Testis": {
+    "descriptionEn": "The male reproductive organ that produces sperm and testosterone.",
+    "descriptionAr": "العضو التناسلي الذكري الذي يُنتج الحيوانات المنوية والتستوستيرون.",
+    "functionEn": "Produces sperm cells and testosterone, the primary male sex hormone.",
+    "functionAr": "يُنتج خلايا الحيوانات المنوية والتستوستيرون، الهرمون الجنسي الرئيسي للذكور.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Testicle"
+  },
+  "Pharynx": {
+    "descriptionEn": "The throat — a muscular tube connecting the nasal cavity to the larynx and esophagus.",
+    "descriptionAr": "الحنجرة — أنبوب عضلي يربط التجويف الأنفي بالحنجرة والمرئ.",
+    "functionEn": "Serves as a shared pathway for food and air, plays a role in swallowing and speech.",
+    "functionAr": "يعمل كمسار مشترك للطعام والهواء، ويُلعب دوراً في البلع والكلام.",
+    "wikiEn": "https://en.wikipedia.org/wiki/Pharynx"
+  }
+}
