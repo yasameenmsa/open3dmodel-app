@@ -1,10 +1,16 @@
-import { redirect } from 'next/navigation';
+'use client';
 
-export default async function LocalePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  redirect(`/${locale}/ceo`);
+import { useEffect } from 'react';
+import { useRouter, useParams } from 'next/navigation';
+
+export default function LocalePage() {
+  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
+
+  useEffect(() => {
+    router.replace(`/${locale}/ceo`);
+  }, [router, locale]);
+
+  return null;
 }
